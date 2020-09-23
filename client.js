@@ -13,9 +13,17 @@ const connect = function () {
   
   conn.on('connect', () => {
     conn.write("Name: MSB")
-    console.log("Connected succesfully")})
-//received data from server and console.logging it 
+    console.log("Connected succesfully")
+  
+    // setInterval (() => {
+    //   conn.write("Move: up")
+    // }, 100)  
+
+  }); 
+  
+    //received data from server and console.logging it 
   conn.on('data', (data) => console.log(data))
+  
   // conn.on('data', () => console.log("Successfully connected to game server"))
   return conn;
 }
